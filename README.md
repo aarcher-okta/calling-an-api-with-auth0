@@ -1,0 +1,1 @@
+SPA with Auth0 (Public Cloud Connected)
