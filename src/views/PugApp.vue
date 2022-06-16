@@ -8,7 +8,7 @@
 export default {
 
   created() {
-    window.location.href = "http://localhost:4040";
+    window.open = "http://localhost:4040";
   },
 
 };

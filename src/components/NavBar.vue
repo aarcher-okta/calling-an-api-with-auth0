@@ -26,7 +26,7 @@
             </li>
 
             <li class="nav-item" v-if="isAuthenticated">
-              <router-link to="/pugapp" class="nav-link">PUG Portal</router-link>
+              <router-link to="/pugapp" target="_blank" class="nav-link">PUG Portal</router-link>
             </li>
 
           </ul>
