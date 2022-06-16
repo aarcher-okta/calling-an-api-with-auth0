@@ -2,6 +2,7 @@ import { createRouter as createVueRouter, createWebHashHistory, Router } from "v
 import Home from "../views/Home.vue";
 import Profile from "../views/Profile.vue";
 import ExternalApi from "../views/ExternalApi.vue";
+import PugApp from  "../views/PugApp.vue";
 import { createAuthGuard } from "@auth0/auth0-vue";
 import { App } from 'vue';
 
@@ -24,7 +25,14 @@ export function createRouter(app: App): Router {
         name: "external-api",
         component: ExternalApi,
         beforeEnter: createAuthGuard(app)
-      }
+      },
+      {
+        path: "/pugapp",
+        component: PugApp,
+        beforeEnter(to, from, next) {
+          window.location.href = "http://localhost:4040";
+        }
+    }
     ],
     history: createWebHashHistory()
   })

@@ -24,6 +24,11 @@
             <li class="nav-item" v-if="isAuthenticated">
               <router-link to="/external-api" class="nav-link">External API</router-link>
             </li>
+
+            <li class="nav-item" v-if="isAuthenticated">
+              <router-link to="/pugapp" class="nav-link">PUG Portal</router-link>
+            </li>
+
           </ul>
           <ul class="navbar-nav d-none d-md-block">
             <li v-if="!isAuthenticated && !isLoading" class="nav-item">
